@@ -1,0 +1,55 @@
+
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" style="max-width:20%;">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+<div>
+  <table mat-table #table [dataSource]="dataSource">
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="styleId"  ><h6>Id.</h6></th>
+      <td mat-cell *matCellDef="let element" class="styleId" >
+        <span class="cursor icon-margin" (click)="selectResource(element)">
+          {{ element.id }} 
+        </span>
+      </td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef class="styleTitle" > <h6>Title</h6> </th>
+      <td mat-cell *matCellDef="let element" class="styleTitle" >
+          <span class="cursor icon-margin" (click)="selectResource(element)" [title]="titleNames(element)">
+            
+            {{ element.title[0] | ellipsis:90 }}
+          </span>
+        </td>
+       </ng-container>
+
+    <!-- Author Column -->
+    <ng-container matColumnDef="author">
+      <th mat-header-cell *matHeaderCellDef class="styleAuthor" > <h6>Author</h6>  </th>
+      <td mat-cell *matCellDef="let element" class="styleAuthor" >
+       
+        <span class="cursor icon-margin" (click)="selectResource(element)" [title]="authorNames(element) | addCommas">
+            {{ authorNames(element) | addCommas | ellipsis:40 }}
+        </span>
+
+      </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef class="styleDate"><h6>Date</h6></th>
+      <td mat-cell *matCellDef="let element" class="styleDate" class="cursor icon-margin" (click)="selectResource(element)"> {{ _formatDisplayDate(element.issued) | date:short }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row  *matRowDef="let row; columns: displayedColumns; let element;"></tr>
+  </table>
+</div>
+
+
+<mat-paginator #paginator></mat-paginator>

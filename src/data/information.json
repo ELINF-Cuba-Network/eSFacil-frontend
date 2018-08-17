@@ -1,0 +1,279 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "author": [
+        {
+          "family": "Machado Rivero",
+          "given": "Manuel Osvaldo",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "Central University of Las Villas",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        },
+        {
+          "family": "Alvarez Fernández",
+          "given": "Luis Carlos",
+          "uri":
+            "https://www.linkedin.com/in/luis-carlos-alvarez-fern%C3%A1ndez-a37154a0/",
+          "affiliation": [
+            {
+              "name": "University of Informatics Sciences",
+              "uri": "https://affiliation.org/0000-0001-6547-8389"
+            }
+          ]
+        },
+        {
+          "family": "Cacere Serrano",
+          "given": "Nieves ",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "University of Pinar del Rio",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        },
+        {
+          "family": "Espinosa Caceres",
+          "given": "Efren",
+          "uri":
+            "https://www.linkedin.com/in/luis-carlos-alvarez-fern%C3%A1ndez-a37154a0/",
+          "affiliation": [
+            {
+              "name": "University of Informatic Sciences",
+              "uri": "https://affiliation.org/0000-0001-6547-8389"
+            }
+          ]
+        }
+      ],
+      "title": [
+        "Developments in the Platform DSpace 5 in the framework of the Network of University Cooperation of VLIR-UOS and Cuban universities."
+      ],
+      "language": "es",
+      "issued": { "date-parts": [2017, 11, 20] },
+      "type": "journal-article",
+      "subject": ["River", "Lagoon"],
+      "subject-id": [
+        {
+          "value": "Ocean",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39065",
+          "key-asserted-by": "AGROVOC"
+        },
+        {
+          "value": "Seaweed",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39070",
+          "key-asserted-by": "AGROVOC"
+        }
+      ],
+      "abstract":
+        "The management of the scientific-technical and academic information of the institutions is one of the challenges that the current society faces. The use of Institutional Repositories is one of the main solutions for this problem.",
+      "ISSN": ["1073-449X", "1535-4970"],
+      "issn-type": [
+        { "value": "1073-449X", "type": "print" },
+        { "value": "1535-4970", "type": "electronic" }
+      ],
+
+      "publisher": "University of Informatics Sciences",
+      "DOI": "10.1164/rccm.201704-0797oc",
+      "page": "873-881",
+      "volume": "196",
+      "container-title": [
+        "American Journal of Respiratory and Critical Care Medicine"
+      ],
+      "condition": "IN_PROGRESS"
+    },
+    {
+      "id": 4,
+      "author": [
+        {
+          "family": "Fernandez Tamayo",
+          "given": "Oreste",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "Central University of Las Villas",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        },
+        {
+          "family": "Cacere Serrano",
+          "given": "Nieves ",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "University of Pinar del Rio",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        }
+      ],
+      "title": [
+        "Interoperability of library systems"
+      ],
+      "language": "es",
+      "issued": { "date-parts": [2017, 11, 20] },
+      "type": "journal-article",
+      "subject": ["River", "Lagoon"],
+      "subject-id": [
+        {
+          "value": "Ocean",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39065",
+          "key-asserted-by": "AGROVOC"
+        },
+        {
+          "value": "Seaweed",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39070",
+          "key-asserted-by": "AGROVOC"
+        }
+      ],
+      "abstract":
+        "The management of the scientific-technical and academic information of the institutions is one of the challenges that the current society faces. The use of Institutional Repositories is one of the main solutions for this problem.",
+      "ISSN": ["1073-449X", "1535-4970"],
+      "issn-type": [
+        { "value": "1073-449X", "type": "print" },
+        { "value": "1535-4970", "type": "electronic" }
+      ],
+
+      "publisher": "University of Informatics Sciences",
+      "DOI": "10.1164/rccm.201704-0797oc",
+      "page": "873-881",
+      "volume": "196",
+      "container-title": [
+        "American Journal of Respiratory and Critical Care Medicine"
+      ],
+      "condition": "IN_PROGRESS"
+    },
+    {
+      "id": 2,
+      "author": [
+        {
+          "family": "Espinosa González",
+          "given": "Erdin",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "University of Pinar del Rio",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        },
+        {
+          "family": "Rivera Hernandez",
+          "given": "Helian",
+          "uri":
+            "https://www.linkedin.com/in/luis-carlos-alvarez-fern%C3%A1ndez-a37154a0/",
+          "affiliation": [
+            {
+              "name": "University of Informatic Sciences",
+              "uri": "https://affiliation.org/0000-0001-6547-8389"
+            }
+          ]
+        }
+      ],
+      "title": [
+        "Lorem ipsum dolor sit amet"
+      ],
+      "language": "en",
+      "issued": { "date-parts": [2017, 10, 25] },
+      "type": "journal-article",
+      "subject": ["River", "Lagoon"],
+      "subject-id": [
+        {
+          "value": "Ocean",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39065",
+          "key-asserted-by": "AGROVOC"
+        },
+        {
+          "value": "Seaweed",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39070",
+          "key-asserted-by": "AGROVOC"
+        }
+      ],
+      "abstract":
+        "The management of the scientific-technical and academic information of the institutions is one of the challenges that the current society faces. The use of Institutional Repositories is one of the main solutions for this problem.",
+      "ISSN": ["1073-449X", "1535-4970"],
+      "issn-type": [
+        { "value": "1073-449X", "type": "print" },
+        { "value": "1535-4970", "type": "electronic" }
+      ],
+
+      "publisher": "University of Informatics Sciences",
+      "DOI": "10.1164/rccm.201704-0797oc",
+      "page": "873-881",
+      "volume": "196",
+      "container-title": [
+        "American Journal of Respiratory and Critical Care Medicine"
+      ],
+      "condition": "ACCEPTED"
+    },
+    {
+      "id": 3,
+      "author": [
+        {
+          "family": "Cacere Serrano",
+          "given": "Nieves ",
+          "uri": "https://orcid.org/0000-0001-5095-8389",
+          "affiliation": [
+            {
+              "name": "University of Pinar del Rio",
+              "uri": "https://affiliation.org/0000-0001-6666-8389"
+            }
+          ]
+        },
+        {
+          "family": "Espinosa Caceres",
+          "given": "Efren",
+          "uri":
+            "https://www.linkedin.com/in/luis-carlos-alvarez-fern%C3%A1ndez-a37154a0/",
+          "affiliation": [
+            {
+              "name": "University of Informatic Sciences",
+              "uri": "https://affiliation.org/0000-0001-6547-8389"
+            }
+          ]
+        }
+      ],
+      "title": [
+        "Aqui es donde el va el titulo de que lo ha escrito esta persona"
+      ],
+      "language": "en",
+      "issued": { "date-parts": [2018, 5, 30] },
+      "type": "journal-article",
+      "subject": ["River", "Lagoon"],
+      "subject-id": [
+        {
+          "value": "Ocean",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39065",
+          "key-asserted-by": "AGROVOC"
+        },
+        {
+          "value": "Seaweed",
+          "key": "http://artemide.art.uniroma2.it:8081/agrovoc/c_39070",
+          "key-asserted-by": "AGROVOC"
+        }
+      ],
+      "abstract":
+        "The management of the scientific-technical and academic information of the institutions is one of the challenges that the current society faces. The use of Institutional Repositories is one of the main solutions for this problem.",
+      "ISSN": ["1073-449X", "1535-4970"],
+      "issn-type": [
+        { "value": "1073-449X", "type": "print" },
+        { "value": "1535-4970", "type": "electronic" }
+      ],
+
+      "publisher": "University of Informatics Sciences",
+      "DOI": "10.1164/rccm.201704-0797oc",
+      "page": "873-881",
+      "volume": "196",
+      "container-title": [
+        "American Journal of Respiratory and Critical Care Medicine"
+      ],
+      "condition": "DENIED"
+    }  
+      
+  ]
+}

@@ -1,0 +1,119 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" style="padding: 2rem">
+
+      <div class="row">
+        <div class="col-10 text-left">
+          <h3 style="display: inline-block">All Info</h3>
+        </div>
+        <div class="col-2 text-right">
+          <mat-icon class="cursor icon-margin" (click)="close()">close</mat-icon>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <button mat-icon-button color="primary">
+            <mat-icon class="cursor">done</mat-icon>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button mat-icon-button color="primary">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button mat-icon-button color="primary">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+      <hr align="center" style="width: 50%">
+      <div>
+        <mat-list-item>
+          <b>Authors:</b>
+          <ul>
+            <ng-container *ngFor="let autor of resource?.author last as isLast">
+              <mat-list-item>Given:
+                <ul>
+                  <li>
+                    {{autor?.given}}
+                  </li>
+                </ul>
+              </mat-list-item>
+              <mat-list-item> Family:
+                <ul>
+                  <li>
+                    {{autor?.family}}
+                  </li>
+                </ul>
+              </mat-list-item>
+              <mat-list-item> Uri:
+                <ul>
+                  <a [href]="autor.uri">
+                    {{autor?.uri}}
+                  </a>
+                </ul>
+              </mat-list-item>
+              <mat-list-item> Affiliantion:
+                <ul>
+                  <li *ngFor="let affiliation of affiliationTypes last as isLast">
+                    {{ affiliation.name }} - Type: {{ affiliation.uri }}
+                  </li>
+                </ul>
+              </mat-list-item>
+              <hr style="width: 95%;" align="left" *ngIf="!isLast">
+            </ng-container>
+          </ul>
+        </mat-list-item>
+        <p>
+          <b>Title:</b> {{resource?.title}}
+        </p>
+        <p>
+          <b>Language:</b> {{resource?.language}}
+        </p>
+        <p>
+          <b>Date:</b>
+          {{ _formatDate(resource?.issued) | date:short }}
+        </p>
+        <p>
+          <b>Type:</b> {{resource?.type}}
+        </p>
+        <p>
+          <b>Subject:</b> {{resource?.subject}}
+        </p>
+        <mat-list-item>
+          <b>Subject ID:</b>
+          <ul>
+            <li *ngFor="let subjectid of resource?.subjectId last as isLast">
+              {{subjectid.key}}
+            </li>
+          </ul>
+        </mat-list-item>
+        <p>
+          <b>Abstract:</b> {{resource?.abstract}}
+        </p>
+        <p>
+          <b>ISSN:</b>
+        </p>
+        <ul>
+          <li *ngFor="let issn of issnTypes last as isLast">
+            {{ issn.value }} - Type: {{ issn.type }}
+          </li>
+        </ul>
+        <p>
+          <b>Publisher:</b> {{resource?.publisher}}
+        </p>
+        <p>
+          <b>DOI:</b> {{resource?.doi}}
+        </p>
+        <p>
+          <b>Page:</b> {{resource?.page}}
+        </p>
+        <p>
+          <b>Volumen:</b> {{resource?.volumen}}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

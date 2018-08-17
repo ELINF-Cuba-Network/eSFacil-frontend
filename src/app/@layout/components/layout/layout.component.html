@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <!-- <div class="header-container"> -->
+    <div class="page-info">
+      <mat-icon matTooltip="Menu"  class="cursor icon-margin" (click)="sidenav.toggle()">menu</mat-icon>
+      
+    </div>
+
+    <div class="user-info">    
+        <mat-icon matTooltip="EsFacil" class="cursor icon-margin" matBadge="15" matBadgeColor="accent">home</mat-icon>  
+      <mat-icon matTooltip="Notifications" class="cursor icon-margin">notifications</mat-icon>      
+      <mat-icon matTooltip="Erdin Espinosa González" class="cursor icon-margin">person</mat-icon>
+      
+    </div>
+    
+  <!-- </div> -->
+
+</mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer mat-card #sidenav mode="over" opened="false" class="shadows-for-side" >    
+      <esf-sidebar></esf-sidebar>
+  </mat-drawer>
+
+  <mat-drawer-content class="drawer-scroll-hidden drawer-width">
+ 
+    <div  class="page-flexbox-wrapper">
+      <router-outlet></router-outlet>      
+    </div>
+   
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+<mat-toolbar style="height:50px; z-index:99; bottom:0px;" color="primary">
+  <div style="font-size: 14px !important">
+    &copy; {{ currentYear }} - EsFacil v1.0.0 - All rights reserved
+  </div>
+</mat-toolbar>
+
