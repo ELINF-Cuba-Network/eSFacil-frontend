@@ -5,12 +5,12 @@ import {
   Output,
   EventEmitter,
   HostListener
-} from "@angular/core";
+} from '@angular/core';
 
 @Component({
-  selector: "esf-file-upload",
-  templateUrl: "./file-upload.component.html",
-  styleUrls: ["./file-upload.component.scss"]
+  selector: 'esf-file-upload',
+  templateUrl: './file-upload.component.html',
+  styleUrls: ['./file-upload.component.scss']
 })
 export class FileUploadComponent implements OnInit {
   @Output() fileSelected = new EventEmitter();

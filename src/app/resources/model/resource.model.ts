@@ -1,16 +1,16 @@
-import { Author } from "./author.model";
-import { SubjectID } from "./subjectID.model";
-import { IssnType } from "./issnType.model";
+import { Author } from './author.model';
+import { SubjectID } from './subjectID.model';
+import { IssnType } from './issnType.model';
 
 export interface IssuedDate {
-  "date-parts": number[];
+  'date-parts': number[];
 }
 
 export enum ResourceConditions {
-  Accepted = "ACCEPTED",
-  InProgress = "IN_PROGRESS",
-  Denied = "DENIED",
-  Sent = "SENT"
+  Accepted = 'ACCEPTED',
+  InProgress = 'IN_PROGRESS',
+  Denied = 'DENIED',
+  Sent = 'SENT'
 }
 
 export interface Resource {

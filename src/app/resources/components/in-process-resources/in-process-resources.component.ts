@@ -1,15 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { Resource } from "../../model/resource.model";
-import { Observable } from "rxjs";
-import { InformationService } from "../../../information.service";
-import { ResourceSelectionDispatcherService } from "../../services/resource-selection-dispatcher.service";
+import { Component, OnInit } from '@angular/core';
+import { Resource } from '../../model/resource.model';
+import { Observable } from 'rxjs';
+import { InformationService } from '../../../information.service';
+import { ResourceSelectionDispatcherService } from '../../services/resource-selection-dispatcher.service';
 
 @Component({
-  selector: "esf-in-process-resources",
-  templateUrl: "./in-process-resources.component.html",
-  styleUrls: ["./in-process-resources.component.scss"]
+  selector: 'esf-in-process-resources',
+  templateUrl: './in-process-resources.component.html',
+  styleUrls: ['./in-process-resources.component.scss']
 })
 export class InProcessResourcesComponent implements OnInit {
+
   resources$: Observable<Resource[]>;
   selectedResource$: Observable<Resource>;
 
@@ -33,6 +34,6 @@ export class InProcessResourcesComponent implements OnInit {
   }
 
   onFileSelected(file) {
-    console.log("FILE SELECTED:", file);
+    console.log('FILE SELECTED:', file);
   }
 }

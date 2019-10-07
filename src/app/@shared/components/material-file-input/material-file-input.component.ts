@@ -17,7 +17,7 @@ export class MaterialFileInputComponent {
   @Input() accept: string;
   @Output() onFileSelect: EventEmitter<File[]> = new EventEmitter();
 
-  @ViewChild("inputFile") nativeInputFile: ElementRef;
+  @ViewChild("inputFile", {static: false}) nativeInputFile: ElementRef;
 
   private _files: File[];
 

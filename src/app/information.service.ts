@@ -1,17 +1,17 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import {
   Resource,
   ResourceConditions
-} from "../app/resources/model/resource.model";
-import { Observable } from "rxjs";
-import { AbstractDataService } from "./@shared/abstract-data-service";
-import { map } from "rxjs/operators";
+} from './resources/model/resource.model';
+import { map } from 'rxjs/operators';
+
+import { AbstractDataService } from './@shared/abstract-data-service';
 
 @Injectable()
 export class InformationService extends AbstractDataService<Resource> {
   constructor(public http: HttpClient) {
-    super(http, "resources");
+    super(http, 'resources');
   }
 
   getAccepted() {

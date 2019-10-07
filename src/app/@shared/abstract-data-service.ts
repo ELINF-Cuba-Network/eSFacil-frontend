@@ -1,8 +1,8 @@
+
+import {throwError as observableThrowError,  Observable ,  of } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 
 import { environment } from "../../environments/environment";
-import { Observable } from "rxjs";
-import { of } from "rxjs";
 import { catchError } from "rxjs/operators";
 
 export abstract class AbstractDataService<T> {
@@ -14,7 +14,7 @@ export abstract class AbstractDataService<T> {
   getAll(): Observable<T[]> {
     return this.http
       .get<T[]>(`${environment.apiURL}/${this.endpointName}`)
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -24,7 +24,7 @@ export abstract class AbstractDataService<T> {
   getOne(id: string): Observable<T> {
     return this.http
       .get<T>(`${environment.apiURL}/${this.endpointName}/${id}`)
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -34,7 +34,7 @@ export abstract class AbstractDataService<T> {
   add(entity: T): Observable<T> {
     return this.http
       .post<T>(`${environment.apiURL}/${this.endpointName}`, entity)
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -50,7 +50,7 @@ export abstract class AbstractDataService<T> {
 
     return this.http
       .post<T>(`${environment.apiURL}/${this.endpointName}`, formData)
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -63,7 +63,7 @@ export abstract class AbstractDataService<T> {
         `${environment.apiURL}/${this.endpointName}/${(entity as any).id}`,
         entity
       )
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -79,7 +79,7 @@ export abstract class AbstractDataService<T> {
 
     return this.http
       .put<T>(`${environment.apiURL}/${this.endpointName}`, formData)
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 
   /**
@@ -91,6 +91,6 @@ export abstract class AbstractDataService<T> {
       .delete<any>(
         `${environment.apiURL}/${this.endpointName}/${(entity as any).id}`
       )
-      .pipe(catchError(error => Observable.throw(error)));
+      .pipe(catchError(error => observableThrowError(error)));
   }
 }

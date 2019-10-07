@@ -1,15 +1,15 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { LayoutComponent } from "./components/layout/layout.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const ROUTES: Routes = [
   {
-    path: "",
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: "resources",
-        loadChildren: "../resources/resources.module#ResourcesModule"
+        path: 'resources',
+        loadChildren: () => import('../resources/resources.module').then(m => m.ResourcesModule)
       }
     ]
   }
