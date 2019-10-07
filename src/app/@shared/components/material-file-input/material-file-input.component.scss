@@ -1,0 +1,14 @@
+.file-select-container {
+    display: flex;
+    .selected-file-name {
+        flex-grow: 3;
+        border: 2px solid #dadfe6;
+        color: #b9a9b2;
+        padding: 6px 18px;
+        margin-right: -2px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 37px;
+        display: inline-block;
+    }
+}

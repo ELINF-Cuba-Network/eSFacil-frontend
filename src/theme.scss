@@ -1,0 +1,138 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+.no-padding-dialog .mat-dialog-container {
+  padding: 0px;
+  overflow: initial;
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+
+}
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing{
+  opacity: 0;
+}
+
+.button-change-width .mat-button{
+  width: 60px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+$mat-my-red: (
+    50: #ffebee,
+    100: #ffcdd2,
+    200: #ef9a9a,
+    300: #e57373,
+    400: #ef5350,
+    500: #CB1515,
+    600: #e53935,
+    700: #d32f2f,
+    800: #c62828,
+    900: #b71c1c,
+    A100: #ff8a80,
+    A200: #ff5252,
+    A400: #ff1744,
+    A700: #d50000,
+     contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: $white-87-opacity,
+      900: $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+
+  $mat-my-blue: (
+    50: #E8EAF6,
+    100: #C5CAE9,
+    200: #9FA8DA,
+    300: #7986CB,
+    400: #5C6BC0,
+    500: #3F51B5,
+    600: #3949AB,
+    700: #303F9F,
+    800: #283593,
+    900: #002A8F,
+    A100: #8C9EFF,
+    A200: #536DFE,
+    A400: #3D5AFE,
+    A700: #304FFE,
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: $white-87-opacity,
+      900: $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+  $mat-my-cabeza: (
+    50: #E8EAF6,
+    100: #C5CAE9,
+    200: #9FA8DA,
+    300: #7986CB,
+    400: #5C6BC0,
+    500: #3F51B5,
+    600: #3949AB,
+    700: #303F9F,
+    800: #283593,
+    900: #4285F4,
+    A100: #8C9EFF,
+    A200: #536DFE,
+    A400: #3D5AFE,
+    A700: #304FFE,
+
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: $white-87-opacity,
+      900: $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+
+$my-app-primary: mat-palette($mat-my-cabeza,900);
+$my-app-accent:  mat-palette($mat-my-red, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+    $alternate-primary: mat-palette($mat-grey,400 );
+    $alternate-accent:  mat-palette($mat-my-red, 500, 900, A100);
+  
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  
+    @include angular-material-theme($alternate-theme);
+}
+
+

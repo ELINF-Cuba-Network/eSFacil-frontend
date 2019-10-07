@@ -1,0 +1,72 @@
+{
+"recurso":[
+    {
+      "document_id": 10,
+      "data": {
+        "volume": "25",
+        "issue": "4",
+        "author": [
+          {
+            "given": "Carlos",
+            "family": "Arcila-Calderón",
+            "sequence": "first",
+            "affiliation": []
+          },
+          {
+            "given": "Eduar",
+            "family": "Barbosa-Caro",
+            "sequence": "additional",
+            "affiliation": []
+          },
+          {
+            "given": "Francisco",
+            "family": "Cabezuelo-Lorenzo",
+            "sequence": "additional",
+            "affiliation": []
+          }
+        ],
+        "container-title": [
+          "El Profesional de la Información"
+        ],
+        "subject": "Datos; Big data; Minería de datos; Aprendizaje automático; Modelamiento de temas; Análisis de sentimientos; Data; Big data; Data mining; Machine learning; Topic modeling; Sentiment analysis.\r",
+        "ISSN": [
+          "1699-2407",
+          "1386-6710"
+        ],
+        "publisher": "Ediciones Profesionales de la Informacion SL",
+        "title": [
+          "Técnicas big data: análisis de textos a gran escala para la investigación científica y periodística"
+        ],
+        "type": "journal-article",
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              7,
+              29
+            ]
+          ]
+        },
+        "status": null,
+        "DOI": "10.3145/epi.2016.jul.12"
+      },
+      "list_bitstream": null,
+      "condition": {
+        "name": "IN_PROCESS",
+        "condition_Id": 4
+      },
+      "person": {
+        "id": 8,
+        "username": "admin",
+        "firstName": "Administrador",
+        "lastName": null,
+        "email": "admin@vlired.cu",
+        "active": true,
+        "role": {
+          "name": "ROLE_ADMIN",
+          "role_Id": 1
+        }
+      }
+    }
+]
+}
