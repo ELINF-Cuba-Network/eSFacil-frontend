@@ -30,6 +30,7 @@ import { EllipsisPipe } from "./pipes/ellipsis.pipe";
 import { MaterialFileInputComponent } from "./components/material-file-input/material-file-input.component";
 import { CommonModule } from "@angular/common";
 import { AddCommasPipe } from "./pipes/add-commas.pipe";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const MATERIAL_MODULES = [
   MatCardModule,
@@ -61,8 +62,10 @@ const MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  imports: [...MATERIAL_MODULES, CommonModule],
+  imports: [...MATERIAL_MODULES, CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     ...MATERIAL_MODULES,
     EllipsisPipe,
     MaterialFileInputComponent,

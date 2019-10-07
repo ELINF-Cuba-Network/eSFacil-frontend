@@ -1,0 +1,12 @@
+<div class="check-authors">
+    <div *ngIf="countAuthors()>0">Lista de autores</div>
+    <mat-chip-list>
+        <ng-container *ngFor="let author of authorsData; let i=index">
+            <mat-chip *ngIf="author.uri" (click)="openUri(author)" (removed)="remove(i)" [removable]="true">
+                <mat-icon class="link-icon">link</mat-icon>
+                {{ author.family }}, {{ author.given }}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+        </ng-container>
+    </mat-chip-list>
+</div>

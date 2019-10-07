@@ -1,56 +1,60 @@
 .container-fluid {
-    padding: 20px;
+  padding: 20px;
 }
-.position{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* margin-top: 56px;       */
+
+.position {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin-top: 56px; */
 }
-.footer-margin{
-    position: fixed;
-    height: 8%;
-    bottom: 0%;
-    right: 0%; 
-    z-index: 99;
+
+.footer-margin {
+  position: fixed;
+  height: 8%;
+  bottom: 0%;
+  right: 0%;
+  z-index: 99;
 }
-.no-padding-mat-card{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-    .page-flexbox-wrapper {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-        
-    }
+
+.no-padding-mat-card {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .example-header {
-    min-height: 64px;
-    padding: 8px 24px 0;
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.notification {
+  padding-right: 3%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.page-info {
+  flex: 1;
+  display: flex;
+  h1 {
+    display: inline-block;
   }
-  .notification{
-    padding-right: 3%;
-}
-  .spacer{
-    flex: 1 1 auto;
 }
 
-
-
-    .page-info {
-        flex: 1;        
-        display: flex;
-        h1 {
-            display: inline-block;
-        }
-    }
-
-    .user-info {
-        margin-left: auto;
-    }
+.user-info {
+  margin-left: auto;
+}

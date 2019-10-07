@@ -1,0 +1,7 @@
+<mat-list-item>
+    <mat-icon mat-list-icon>attach_file</mat-icon>
+    <a mat-line>{{ bitstream.name }}</a>
+    <div *ngIf="!deleting" (click)="delete()" class="delete"><i class="material-icons dp48">highlight_off</i></div>
+    <div *ngIf="!deleting" (click)="delete()" class="view"><i class="material-icons dp48">open_in_new</i></div>
+    <div><mat-spinner [diameter]="19" *ngIf="deleting"></mat-spinner></div>
+</mat-list-item>

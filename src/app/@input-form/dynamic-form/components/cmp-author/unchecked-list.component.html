@@ -1,0 +1,10 @@
+<div class="uncheck-authors">
+    <mat-chip-list>
+        <ng-container *ngFor="let author of authorsData; let i=index">
+            <mat-chip *ngIf="!author.uri" (click)="authorSelected(i, author)" (removed)="remove(i)" [removable]="true">
+                {{ author.family }}, {{ author.given }}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+        </ng-container>
+    </mat-chip-list>
+</div>

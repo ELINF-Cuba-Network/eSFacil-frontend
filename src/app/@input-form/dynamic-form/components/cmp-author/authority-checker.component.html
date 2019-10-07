@@ -1,0 +1,14 @@
+<h4 mat-dialog-title>Choose the author</h4>
+<mat-dialog-content>
+    <h5 *ngIf="authorities.length == 0">Authors not found</h5>
+    <mat-radio-group #autorities>
+        <mat-radio-button *ngFor="let authority of authorities" [value]="authority" (change)="updateSelectedValue($event)">
+            {{ authority.authority }}
+        </mat-radio-button>
+    </mat-radio-group>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="actions">
+        <button (click)="select()" mat-raised-button [disabled]="!selectedValue">OK</button>
+    </div>
+</mat-dialog-actions>

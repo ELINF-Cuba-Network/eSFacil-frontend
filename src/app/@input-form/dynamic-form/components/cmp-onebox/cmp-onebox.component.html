@@ -1,0 +1,36 @@
+<h2>{{ config.label }}
+  <ng-container *ngIf="config.required">*</ng-container>
+</h2>
+<div class="help">{{ config.help }}</div>
+
+<div class="onebox-input">
+
+  <div class="row">
+    <div class="col-12 label">
+      <mat-form-field>
+
+        <input matInput
+               placeholder="{{ config.label }}"
+               [name]="this.config.cslfield"
+               [required]="this.config.required"
+               [(ngModel)]="data[this.config.cslfield]"
+               #field="ngModel">
+
+        <button mat-button *ngIf="data[this.config.cslfield]"
+                matSuffix mat-icon-button aria-label="Clear"
+                (click)="clean()">
+          <mat-icon>close</mat-icon>
+        </button>
+
+      </mat-form-field>
+
+      <ng-container *ngIf="!field.valid && field.dirty">
+        <mat-error *ngIf="field.errors.required">
+          This field is required
+        </mat-error>
+      </ng-container>
+
+    </div>
+  </div>
+
+</div>

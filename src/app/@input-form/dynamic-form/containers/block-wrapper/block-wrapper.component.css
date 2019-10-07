@@ -1,0 +1,12 @@
+div.edit-metadata {
+    margin: 10px 100px;
+}
+
+div.controls {
+    text-align: right;
+    margin: 1% 0;
+}
+
+div.controls > button {
+    margin: 0 .4%;
+}

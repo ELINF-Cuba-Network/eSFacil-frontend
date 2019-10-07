@@ -10,6 +10,10 @@ const ROUTES: Routes = [
       {
         path: 'resources',
         loadChildren: () => import('../resources/resources.module').then(m => m.ResourcesModule)
+      },
+      {
+        path: 'input-form',
+        loadChildren: () => import('../@input-form/@input-form.module').then(m => m.InputFormModule)
       }
     ]
   }

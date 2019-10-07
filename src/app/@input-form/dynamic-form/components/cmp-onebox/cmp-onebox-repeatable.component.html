@@ -1,0 +1,31 @@
+<h2>{{ config.label }}<ng-container *ngIf="config.required">*</ng-container></h2>
+<div class="help">{{ config.help }}</div>
+
+<div class="onebox-input">
+    <div class="container" fxLayout="row">
+        <div fxFlex="90%" class="label">
+            <mat-form-field>
+                <input matInput
+                       placeholder="{{ config.label }}"
+                       [(ngModel)]="currentValue.value">
+            </mat-form-field>
+        </div>
+        <div fxFlex="20%">
+            <button (click)="addValue()" mat-raised-button><i class="material-icons dp48"><ng-container *ngIf="!isUpdating">add</ng-container><ng-container *ngIf="isUpdating">cached</ng-container></i></button>
+        </div>
+    </div>
+</div>
+<div class="titles">
+    <mat-chip-list>
+        <mat-chip *ngFor="let it of map; let i=index" (click)="selectValue(i, it.value)" (removed)="remove(i)" [removable]="true">
+            {{ it.value }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+    </mat-chip-list>
+</div>
+
+<div *ngIf="map.length == 0">
+    <mat-error>
+        This field is required
+    </mat-error>
+</div>

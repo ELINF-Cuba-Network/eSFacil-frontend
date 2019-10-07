@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'
+
+// Bootstrap support
+@import "variables"
+@import "~bootstrap/scss/functions"
+@import "~bootstrap/scss/variables"
+@import "~bootstrap/scss/mixins"
+@import "~bootstrap/scss/reboot"
+@import "~bootstrap/scss/grid"
+@import "reset"
+
+/* fallback */
+@font-face
+  font-family: 'Material Icons'
+  font-style: normal
+  font-weight: 400
+  src: url('assets/fonts/Material-Icons.woff2') format('woff2')
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 24px
+  line-height: 1
+  letter-spacing: normal
+  text-transform: none
+  display: inline-block
+  white-space: nowrap
+  word-wrap: normal
+  direction: ltr
+  -moz-font-feature-settings: 'liga'
+  -moz-osx-font-smoothing: grayscale
+
+body
+  padding: 0
+  margin: 0
+
+button
+  min-width: unset !important
+
+div.component-wrapper
+  margin: 2% 0
+
+.mat-expansion-panel
+  box-shadow: none !important
+  border-top: 1px solid #263238
+  border-right: 1px solid #263238
+  border-left: 1px solid #263238
+
+.mat-expansion-panel:first-of-type
+  border-top-right-radius: 2px !important
+  border-top-left-radius: 2px !important
+
+.mat-expansion-panel:last-of-type
+  border-bottom: 1px solid #263238 !important
+  border-bottom-right-radius: 2px !important
+  border-bottom-left-radius: 2px !important
+
+.mat-expansion-panel-header
+  font-weight: bold
+
+/* DROP ZONE */
+
+.dropzone
+  margin: 1% 0 !important
+  min-height: unset !important
+  border: none !important
+  background: white !important
+  padding: 0 !important
+
+  > div.dz-wrapper .dz-preview
+    display: none
+
+.mat-button:focus, .mat-icon:focus
+  outline: none !important
+
+.cursor
+  cursor: pointer
+
+.shadows-for-head
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)
+
+.shadows-for-side
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24)
+
+.footer
+  width: 100%
+  position: absolute
+
+button:focus, a:focus
+  outline: none !important
+

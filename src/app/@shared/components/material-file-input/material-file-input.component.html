@@ -1,6 +1,6 @@
 <span class="file-select-container">
-    <span  class="cursor icon-margin" class="selected-file-name" (click)="selectFile()" >{{ _files ? _files[0].name : 'No file selected...' }}</span>
-    <input [accept]="accept" type="file" (change)="onNativeInputFileSelect($event)" #inputFile hidden />
+    <span class="cursor icon-margin" class="selected-file-name" (click)="selectFile()">{{ _files ? _files[0].name : 'No file selected...' }}</span>
+    <input [accept]="accept" type="file" (change)="onNativeInputFileSelect($event)" #inputFile hidden/>
     <button type="button" mat-raised-button (click)="selectFile()" color="primary">
         <mat-icon>file_upload</mat-icon>
         <ng-content *ngIf="!fileCount" select=".nofiles"></ng-content>

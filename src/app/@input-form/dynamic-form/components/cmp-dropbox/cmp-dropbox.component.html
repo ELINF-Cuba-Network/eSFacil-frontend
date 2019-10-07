@@ -1,0 +1,27 @@
+<dropzone
+            [class.hidden]="loading"
+            [message]="'Click or drag files here to upload'"
+            (error)="error($event)"
+            (canceled)="log($event)"
+            (success)="success($event)"
+            (sending)="startSending($event)"
+            (uploadProgress)="progress($event)">
+</dropzone>
+<div *ngIf="loading" class="progress-bar">
+    <mat-progress-bar
+            class="example-margin"
+            [mode]="'determinate'"
+            [value]="uploadingValue">
+    </mat-progress-bar>
+</div>
+
+<div *ngIf="data.bitstreams.length > 0" class="bistream-area">
+    <mat-divider></mat-divider>
+
+    <!-- List of bitstreams-->
+    <mat-list>
+        <h4 mat-subheader>Bitstreams</h4>
+        <esfacil-bitstream-item *ngFor="let bs of data.bitstreams" [bitstream]="bs" (deletingChange)="delete($event)">
+        </esfacil-bitstream-item>
+    </mat-list>
+</div>
