@@ -7,11 +7,12 @@ import {
   OnChanges,
   EventEmitter
 } from "@angular/core";
-import { MatTableDataSource, MatPaginator } from "@angular/material";
+import { MatPaginator } from "@angular/material/paginator";
+import { MatTableDataSource } from "@angular/material/table";
 import { Resource, IssuedDate } from "../../model/resource.model";
 
 import { formatDisplayDate } from "../../shared/date-formatter";
-import { AfterViewInit } from "@angular/core/src/metadata/lifecycle_hooks";
+import { AfterViewInit } from "@angular/core";
 
 @Component({
   selector: "esf-resource-table",
@@ -28,7 +29,7 @@ export class ResourceTableComponent
   displayedColumns = ["id", "title", "author", "date"];
   dataSource: MatTableDataSource<Resource>;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace

@@ -11,10 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { UserComponent } from './components/user/user.component';
 import { InformationService } from '../information.service';
-import {
-  ShowOnDirtyErrorStateMatcher,
-  ErrorStateMatcher
-} from '@angular/material';
+import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/material/core';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, UserComponent, LogoutComponent],
