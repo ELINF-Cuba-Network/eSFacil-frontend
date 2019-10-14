@@ -33,7 +33,11 @@ export class InProcessResourcesComponent implements OnInit {
     this.rSelectionDispatcher.setSelectedResource(res);
   }
 
-  onFileSelected(file) {
-    console.log('FILE SELECTED:', file);
+  onFileSelected(files) {
+
+    if (files.length > 0) {
+      this.resourceService.uploadFile(files[0])
+        .subscribe(console.log);
+    }
   }
 }

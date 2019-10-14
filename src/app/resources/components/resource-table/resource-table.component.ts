@@ -6,18 +6,18 @@ import {
   Output,
   OnChanges,
   EventEmitter
-} from "@angular/core";
-import { MatPaginator } from "@angular/material/paginator";
-import { MatTableDataSource } from "@angular/material/table";
-import { Resource, IssuedDate } from "../../model/resource.model";
+} from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Resource, IssuedDate } from '../../model/resource.model';
 
-import { formatDisplayDate } from "../../shared/date-formatter";
-import { AfterViewInit } from "@angular/core";
+import { formatDisplayDate } from '../../shared/date-formatter';
+import { AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: "esf-resource-table",
-  templateUrl: "./resource-table.component.html",
-  styleUrls: ["./resource-table.component.scss"]
+  selector: 'esf-resource-table',
+  templateUrl: './resource-table.component.html',
+  styleUrls: ['./resource-table.component.scss']
 })
 export class ResourceTableComponent
   implements OnInit, OnChanges, AfterViewInit {
@@ -26,10 +26,10 @@ export class ResourceTableComponent
 
   _formatDisplayDate = formatDisplayDate;
 
-  displayedColumns = ["id", "title", "author", "date"];
+  displayedColumns = ['id', 'title', 'author', 'date'];
   dataSource: MatTableDataSource<Resource>;
 
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
@@ -60,9 +60,9 @@ export class ResourceTableComponent
   }
 
   authorNames(resource: Resource) {
-    return resource.author.map(a => `${a.given} ${a.family}`);
+    return resource.data.author;
   }
   titleNames(resource: Resource) {
-    return resource.title;
+    return resource.data.title;
   }
 }

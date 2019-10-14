@@ -12,7 +12,7 @@
       <th mat-header-cell *matHeaderCellDef class="styleId"  ><h6>Id.</h6></th>
       <td mat-cell *matCellDef="let element" class="styleId" >
         <span class="cursor icon-margin" (click)="selectResource(element)">
-          {{ element.id }} 
+          {{ element.id }}
         </span>
       </td>
     </ng-container>
@@ -22,8 +22,8 @@
       <th mat-header-cell *matHeaderCellDef class="styleTitle" > <h6>Title</h6> </th>
       <td mat-cell *matCellDef="let element" class="styleTitle" >
           <span class="cursor icon-margin" (click)="selectResource(element)" [title]="titleNames(element)">
-            
-            {{ element.title[0] | ellipsis:90 }}
+
+            {{ element.data.title[0] | ellipsis:90 }}
           </span>
         </td>
        </ng-container>
@@ -32,7 +32,7 @@
     <ng-container matColumnDef="author">
       <th mat-header-cell *matHeaderCellDef class="styleAuthor" > <h6>Author</h6>  </th>
       <td mat-cell *matCellDef="let element" class="styleAuthor" >
-       
+
         <span class="cursor icon-margin" (click)="selectResource(element)" [title]="authorNames(element) | addCommas">
             {{ authorNames(element) | addCommas | ellipsis:40 }}
         </span>
@@ -50,6 +50,5 @@
     <tr mat-row  *matRowDef="let row; columns: displayedColumns; let element;"></tr>
   </table>
 </div>
-
 
 <mat-paginator #paginator></mat-paginator>

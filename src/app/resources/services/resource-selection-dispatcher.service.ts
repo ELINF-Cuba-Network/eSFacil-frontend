@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { Subject ,  Observable ,  BehaviorSubject } from "rxjs";
-import { Resource } from "../model/resource.model";
+import { Injectable } from '@angular/core';
+import { Subject ,  Observable ,  BehaviorSubject } from 'rxjs';
+import { Resource } from '../model/resource.model';
 
 @Injectable()
 export class ResourceSelectionDispatcherService {

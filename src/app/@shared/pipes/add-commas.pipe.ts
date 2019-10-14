@@ -1,17 +1,17 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: "addCommas"
+  name: 'addCommas'
 })
 export class AddCommasPipe implements PipeTransform {
   transform(authors: null | string[], args?: any): any {
     if (!authors) {
-      return "Author Unknown";
+      return 'Author Unknown';
     }
 
     switch (authors.length) {
       case 0: {
-        return "Author Unknown";
+        return 'Author Unknown';
       }
 
       case 1: {
@@ -25,7 +25,7 @@ export class AddCommasPipe implements PipeTransform {
       default: {
         const last = authors[authors.length - 1];
         const remaining = authors.slice(0, -1);
-        return `${remaining.join(", ")}, and ${last}`;
+        return `${remaining.join(', ')}, and ${last}`;
       }
     }
   }

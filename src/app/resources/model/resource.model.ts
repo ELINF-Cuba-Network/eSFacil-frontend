@@ -8,13 +8,12 @@ export interface IssuedDate {
 
 export enum ResourceConditions {
   Accepted = 'ACCEPTED',
-  InProgress = 'IN_PROGRESS',
+  InProgress = 'IN_PROCESS',
   Denied = 'DENIED',
   Sent = 'SENT'
 }
 
-export interface Resource {
-  id?: number;
+export interface Data {
   author?: Author[];
   title?: string;
   language?: string;
@@ -30,7 +29,17 @@ export interface Resource {
   page?: string;
   volumen?: number;
   containerTitle?: string;
+}
 
+export interface Bitstream {
+  id?: string;
+  name?: string;
+  extension?: string;
+}
+
+export interface Resource {
+  id?: number;
+  data?: Data;
   condition?: ResourceConditions;
-  file?: File;
+  bitstreams?: Bitstream[];
 }
