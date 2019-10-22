@@ -6,7 +6,7 @@ import {
 } from './resources/model/resource.model';
 import { map } from 'rxjs/operators';
 
-import { AbstractDataService } from './@shared/abstract-data-service';
+import { AbstractDataService } from './@shared/services/abstract-data-service';
 import { environment } from '../environments/environment';
 import { OptionType } from '@angular/cli/models/interface';
 

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './components/user/user.component';
 import { InformationService } from '../information.service';
 import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/material/core';
+import { ShareDataService } from '../@shared/services/share-data.service';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, UserComponent, LogoutComponent],
@@ -25,7 +26,8 @@ import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/materi
   providers: [
     InformationService,
     ErrorStateMatcher,
-    ShowOnDirtyErrorStateMatcher
+    ShowOnDirtyErrorStateMatcher,
+    ShareDataService
   ],
   bootstrap: [AppComponent]
 })

@@ -31,6 +31,7 @@ import { MaterialFileInputComponent } from "./components/material-file-input/mat
 import { CommonModule } from "@angular/common";
 import { AddCommasPipe } from "./pipes/add-commas.pipe";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShareDataService } from './services/share-data.service';
 
 const MATERIAL_MODULES = [
   MatCardModule,

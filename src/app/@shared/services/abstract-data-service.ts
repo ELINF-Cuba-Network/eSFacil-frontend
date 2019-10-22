@@ -1,7 +1,7 @@
 import {throwError as observableThrowError,  Observable ,  of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { catchError } from 'rxjs/operators';
 
 export abstract class AbstractDataService<T> {

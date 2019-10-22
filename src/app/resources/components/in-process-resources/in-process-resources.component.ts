@@ -3,6 +3,9 @@ import { Resource } from '../../model/resource.model';
 import { Observable } from 'rxjs';
 import { InformationService } from '../../../information.service';
 import { ResourceSelectionDispatcherService } from '../../services/resource-selection-dispatcher.service';
+import { finalize, take } from 'rxjs/operators';
+import { ShareDataService } from '../../../@shared/services/share-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'esf-in-process-resources',
@@ -18,7 +21,9 @@ export class InProcessResourcesComponent implements OnInit {
 
   constructor(
     private resourceService: InformationService,
-    private rSelectionDispatcher: ResourceSelectionDispatcherService
+    private rSelectionDispatcher: ResourceSelectionDispatcherService,
+    private shareDataService: ShareDataService,
+    private router: Router
   ) {}
   ngOnInit() {
     this.resources$ = this.resourceService.getInProgress();
@@ -36,8 +41,19 @@ export class InProcessResourcesComponent implements OnInit {
   onFileSelected(files) {
 
     if (files.length > 0) {
-      this.resourceService.uploadFile(files[0])
-        .subscribe(console.log);
+
+      this.resourceService
+        .uploadFile(files[0])
+        .pipe(
+          take(1)
+        )
+        .subscribe((resp) => {
+          // Send response to edit metadata view
+          this.shareDataService.setData(resp);
+
+          // Navigate
+          this.router.navigate(['/app/input-form/metadata']);
+        });
     }
   }
 }

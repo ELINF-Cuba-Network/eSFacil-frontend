@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { BlockWrapperService } from './block-wrapper.service';
+import { ShareDataService } from '../../../../@shared/services/share-data.service';
 
 @Component({
   selector: 'esfacil-block-wrapper',
@@ -83,7 +84,8 @@ export class BlockWrapperComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private blockWrapperService: BlockWrapperService
+    private blockWrapperService: BlockWrapperService,
+    private sharedDataService: ShareDataService
   ) {
   }
 
@@ -95,8 +97,11 @@ export class BlockWrapperComponent implements OnInit {
       .subscribe(config => {
         this.config = config;
 
+        // Get the data from shared service
+        this.data = this.sharedDataService.getData();
+
         this.form = this.fb.group({});
-        const obj = Object.assign(this.data, {});
+        const obj = Object.assign(this.data.data, {});
         this.data = obj;
 
         // Ready !!

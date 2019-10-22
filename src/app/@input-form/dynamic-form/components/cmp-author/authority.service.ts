@@ -3,7 +3,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { BaseService } from '../../../../@shared/base-service';
+import { BaseService } from '../../../../@shared/services/base-service';
 import { environment } from '../../../../../environments/environment';
 
 @Injectable()
