@@ -18,12 +18,4 @@ export class CmpOneboxComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  clean() {
-
-    // Mark field as dirty to show the error the first time
-    this.field.control.markAsDirty();
-    this.data[this.config.cslfield] = null;
-  }
-
 }

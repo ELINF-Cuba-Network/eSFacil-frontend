@@ -10,16 +10,18 @@
     <div class="help">{{ config.help }}</div>
   </div>
 
-  <div fxLayout="row">
+  <div fxLayout="row" class="textarea-input">
+
     <div fxFlex="95" class="label">
       <mat-form-field>
-        <input matInput
-               placeholder="{{ config.label }}"
-               [(ngModel)]="currentValue.value">
+        <textarea matInput
+                  placeholder="{{ config.label }}"
+                  [(ngModel)]="currentValue.value">
+        </textarea>
       </mat-form-field>
     </div>
 
-    <div fxFlex="5">
+    <div class="add-btn" fxFlex="5">
       <button mat-mini-fab (click)="addValue()">
         <mat-icon>
           <ng-container *ngIf="!isUpdating">add</ng-container>
@@ -27,9 +29,10 @@
         </mat-icon>
       </button>
     </div>
+
   </div>
 
-  <div fxFlex="100" fxFlexOffset="2" class="titles">
+  <div class="titles">
     <mat-chip-list>
       <mat-chip *ngFor="let it of map; let i=index" (click)="selectValue(i, it.value)" (removed)="remove(i)"
                 [removable]="true">
@@ -39,11 +42,10 @@
     </mat-chip-list>
   </div>
 
-  <div fxFlex="100" class="titles">
-    <div *ngIf="map.length == 0">
-      <mat-error>
-        This field is required
-      </mat-error>
-    </div>
+  <div *ngIf="map.length == 0">
+    <mat-error>
+      This field is required
+    </mat-error>
   </div>
+
 </div>

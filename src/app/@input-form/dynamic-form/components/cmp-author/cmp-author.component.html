@@ -1,60 +1,75 @@
-<h2>Autores
-  <ng-container *ngIf="config.required">*</ng-container>
-</h2>
-<div class="help">{{ config.help }}</div>
+<div fxLayout="column" fxLayoutAlign="space-evenly stretch">
 
-<div class="control"> <!-- Wrap a input control -->
-  <div class="row">
-
-    <div class="label col-1">
-      <label>{{ config.label }}</label>
-    </div>
-
-    <div class="col-4">
-      <mat-form-field>
-        <input #family matInput [errorStateMatcher]="matcher" placeholder="Given" [(ngModel)]="currentAuthor.family">
-
-        <button mat-button *ngIf="currentAuthor.family"
-                matSuffix mat-icon-button aria-label="Clear"
-                (click)="currentAuthor.family = null">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-    </div>
-
-    <div class="col-5">
-      <mat-form-field>
-        <input #given matInput placeholder="Family" [errorStateMatcher]="matcher" [(ngModel)]="currentAuthor.given">
-
-        <button mat-button *ngIf="currentAuthor.given"
-                matSuffix mat-icon-button aria-label="Clear"
-                (click)="currentAuthor.given = null">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-    </div>
-
-    <div class="col-1">
-      <button mat-raised-button [disabled]="inputIsEmpty()" (click)="openAuthorityDialog()">Author ID</button>
-    </div>
-
-    <div class="col-1">
-      <button (click)="addAuthor()" [disabled]="inputIsEmpty()" mat-raised-button><i class="material-icons dp48">
-        <ng-container *ngIf="!isUpdating">add</ng-container>
-        <ng-container *ngIf="isUpdating">cached</ng-container>
-      </i></button>
-    </div>
+  <div fxFlex="100">
+    <h2>
+      Autores
+      <ng-container *ngIf="config.required">*</ng-container>
+    </h2>
   </div>
+
+  <div fxFlex="100">
+    <div class="help">{{ config.help }}</div>
+  </div>
+
+  <div fxLayout="row"> <!-- Wrap a input control -->
+
+      <div fxFlex="6" class="label">
+        <label>{{ config.label }}</label>
+      </div>
+
+      <div fxFlex="41">
+        <mat-form-field>
+          <input #family matInput [errorStateMatcher]="matcher" placeholder="Given" [(ngModel)]="currentAuthor.family">
+
+          <button mat-button *ngIf="currentAuthor.family"
+                  matSuffix mat-icon-button aria-label="Clear"
+                  (click)="currentAuthor.family = null">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="41" fxFlexOffset="1">
+        <mat-form-field>
+          <input #given matInput placeholder="Family" [errorStateMatcher]="matcher" [(ngModel)]="currentAuthor.given">
+
+          <button mat-button *ngIf="currentAuthor.given"
+                  matSuffix mat-icon-button aria-label="Clear"
+                  (click)="currentAuthor.given = null">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="5" fxFlexOffset="3">
+        <button mat-mini-fab [disabled]="inputIsEmpty()" (click)="openAuthorityDialog()">
+          <mat-icon>
+            group_add
+          </mat-icon>
+        </button>
+      </div>
+
+      <div fxFlex="5">
+        <button mat-mini-fab (click)="addAuthor()">
+          <mat-icon>
+            <ng-container *ngIf="!isUpdating">add</ng-container>
+            <ng-container *ngIf="isUpdating">cached</ng-container>
+          </mat-icon>
+        </button>
+      </div>
+
+  </div>
+
+  <div *ngIf="!isValid()">
+    <mat-error>
+      Este campo es requerido
+    </mat-error>
+  </div>
+
+  <esfacil-unchecked-list [authorsData]="data[this.config.cslfield]" (authorChange)="updateCurrentAuthor($event)">
+  </esfacil-unchecked-list>
+
+  <esfacil-checked-list [authorsData]="data[this.config.cslfield]">
+  </esfacil-checked-list>
+
 </div>
-
-<div *ngIf="!isValid()">
-  <mat-error>
-    Este campo es requerido
-  </mat-error>
-</div>
-
-<esfacil-unchecked-list [authorsData]="data[this.config.cslfield]" (authorChange)="updateCurrentAuthor($event)">
-</esfacil-unchecked-list>
-
-<esfacil-checked-list [authorsData]="data[this.config.cslfield]">
-</esfacil-checked-list>

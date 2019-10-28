@@ -32,6 +32,7 @@ import { CommonModule } from "@angular/common";
 import { AddCommasPipe } from "./pipes/add-commas.pipe";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShareDataService } from './services/share-data.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const MATERIAL_MODULES = [
   MatCardModule,
@@ -63,15 +64,26 @@ const MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  imports: [...MATERIAL_MODULES, CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    ...MATERIAL_MODULES,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FlexLayoutModule
+  ],
   exports: [
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     ...MATERIAL_MODULES,
     EllipsisPipe,
     MaterialFileInputComponent,
     AddCommasPipe
   ],
-  declarations: [EllipsisPipe, MaterialFileInputComponent, AddCommasPipe]
+  declarations: [
+    EllipsisPipe,
+    MaterialFileInputComponent,
+    AddCommasPipe
+  ]
 })
 export class SharedModule {}

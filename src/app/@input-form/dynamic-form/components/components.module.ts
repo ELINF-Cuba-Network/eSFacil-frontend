@@ -14,6 +14,9 @@ import { AuthorityService } from './cmp-author/authority.service';
 import { CmpOneboxComponent } from './cmp-onebox/cmp-onebox.component';
 import { BitstreamItemComponent } from './cmp-dropbox/bitstream-item.component';
 import { DropboxService } from './cmp-dropbox/dropbox.service';
+import { CmpTextareaComponent } from './cmp-textarea/cmp-textarea.component';
+import { CmpTextareaRepeatableComponent } from './cmp-textarea/cmp-textarea-repeatable.component';
+import { CmpBaseComponent } from './cmp-base/cmp-base.component';
 
 @NgModule({
   imports: [
@@ -31,6 +34,9 @@ import { DropboxService } from './cmp-dropbox/dropbox.service';
     CmpOneboxRepeatableComponent,
     CmpOneboxComponent,
     BitstreamItemComponent,
+    CmpTextareaComponent,
+    CmpTextareaRepeatableComponent,
+    CmpBaseComponent
   ],
   exports: [
     CmpSelectComponent,

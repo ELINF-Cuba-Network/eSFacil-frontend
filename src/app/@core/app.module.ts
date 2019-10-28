@@ -13,6 +13,7 @@ import { UserComponent } from './components/user/user.component';
 import { InformationService } from '../information.service';
 import { ShowOnDirtyErrorStateMatcher, ErrorStateMatcher } from '@angular/material/core';
 import { ShareDataService } from '../@shared/services/share-data.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, UserComponent, LogoutComponent],

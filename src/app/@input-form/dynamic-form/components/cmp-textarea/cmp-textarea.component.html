@@ -3,19 +3,19 @@
 </h2>
 <div class="help">{{ config.help }}</div>
 
-<div class="onebox-input">
+<div class="textarea-input">
 
   <div class="row">
     <div class="col-12 label">
       <mat-form-field>
 
-        <input matInput
+        <textarea matInput
                placeholder="{{ config.label }}"
                [name]="this.config.cslfield"
                [required]="this.config.required"
                [(ngModel)]="data[this.config.cslfield]"
                #field="ngModel">
-
+        </textarea>
       </mat-form-field>
 
       <ng-container *ngIf="!field.valid && field.dirty">
