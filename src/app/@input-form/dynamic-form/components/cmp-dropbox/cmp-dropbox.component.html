@@ -1,12 +1,9 @@
-<dropzone
-            [class.hidden]="loading"
-            [message]="'Click or drag files here to upload'"
-            (error)="error($event)"
-            (canceled)="log($event)"
-            (success)="success($event)"
-            (sending)="startSending($event)"
-            (uploadProgress)="progress($event)">
-</dropzone>
+<div>
+  <esf-drop-zone
+    (fileChange)="onFilesUpload($event)">
+  </esf-drop-zone>
+</div>
+
 <div *ngIf="loading" class="progress-bar">
     <mat-progress-bar
             class="example-margin"

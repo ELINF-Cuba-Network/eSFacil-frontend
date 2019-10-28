@@ -17,6 +17,26 @@ import { DropboxService } from './cmp-dropbox/dropbox.service';
 import { CmpTextareaComponent } from './cmp-textarea/cmp-textarea.component';
 import { CmpTextareaRepeatableComponent } from './cmp-textarea/cmp-textarea-repeatable.component';
 import { CmpBaseComponent } from './cmp-base/cmp-base.component';
+import { DropZoneComponent } from './cmp-dropbox/drop-zone.component';
+import { CmpDropboxComponent } from './cmp-dropbox/cmp-dropbox.component';
+
+const DYNAMIC_COMPONENTS = [
+  CmpSelectComponent,
+  DynamicFieldDirective,
+  CmpGenericComponent,
+  CmpAuthorComponent,
+  CheckedListComponent,
+  UncheckedListComponent,
+  AuthorityCheckerComponent,
+  CmpOneboxRepeatableComponent,
+  CmpOneboxComponent,
+  BitstreamItemComponent,
+  CmpTextareaComponent,
+  CmpTextareaRepeatableComponent,
+  CmpDropboxComponent,
+  CmpBaseComponent,
+  DropZoneComponent
+];
 
 @NgModule({
   imports: [
@@ -24,31 +44,10 @@ import { CmpBaseComponent } from './cmp-base/cmp-base.component';
     SharedModule
   ],
   declarations: [
-    CmpSelectComponent,
-    DynamicFieldDirective,
-    CmpGenericComponent,
-    CmpAuthorComponent,
-    CheckedListComponent,
-    UncheckedListComponent,
-    AuthorityCheckerComponent,
-    CmpOneboxRepeatableComponent,
-    CmpOneboxComponent,
-    BitstreamItemComponent,
-    CmpTextareaComponent,
-    CmpTextareaRepeatableComponent,
-    CmpBaseComponent
+    ...DYNAMIC_COMPONENTS
   ],
   exports: [
-    CmpSelectComponent,
-    CmpOneboxRepeatableComponent,
-    DynamicFieldDirective,
-    CmpGenericComponent,
-    CmpAuthorComponent,
-    CheckedListComponent,
-    UncheckedListComponent,
-    AuthorityCheckerComponent,
-    CmpOneboxComponent,
-    BitstreamItemComponent
+    ...DYNAMIC_COMPONENTS
   ],
   entryComponents: [
     AuthorityCheckerComponent,

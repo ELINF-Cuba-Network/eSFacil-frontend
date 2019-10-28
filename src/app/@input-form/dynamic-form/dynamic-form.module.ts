@@ -6,7 +6,6 @@ import { ControlWrapperComponent } from './containers/control-wrapper/control-wr
 import { CmpOneboxRepeatableComponent, CmpSelectComponent } from './components';
 import { BlockWrapperComponent } from './containers/block-wrapper/block-wrapper.component';
 import { CmpAuthorComponent } from './components/cmp-author/cmp-author.component';
-import { CmpDropboxComponent } from './components/cmp-dropbox/cmp-dropbox.component';
 import { SharedModule } from '../../@shared/shared.module';
 
 @NgModule({
@@ -17,8 +16,7 @@ import { SharedModule } from '../../@shared/shared.module';
   ],
   declarations: [
     ControlWrapperComponent,
-    BlockWrapperComponent,
-    CmpDropboxComponent
+    BlockWrapperComponent
   ],
   exports: [
     ComponentsModule,

@@ -1,0 +1,27 @@
+<div class="box">
+
+  <div fxLayout="row wrap">
+
+    <div fxFlex="10" fxFlexOffset="20">
+      <mat-icon>
+        file_upload
+      </mat-icon>
+    </div>
+
+    <div fxFlex="70">
+      <label>
+        <strong (click)="addFiles()">Choose a file </strong>
+        <span> or drag it here</span>
+      </label>
+    </div>
+
+  </div>
+
+  <input
+    type="file"
+    #file
+    style="display: none"
+    (change)="onFilesAdd()"
+    multiple>
+
+</div>

@@ -12,7 +12,7 @@ export class BlockWrapperComponent implements OnInit {
 
   form: FormGroup;
   config;
-  data;
+  document;
 
   // Control var for only render the view went data is ready
   isReady = false;
@@ -33,11 +33,11 @@ export class BlockWrapperComponent implements OnInit {
         this.config = config;
 
         // Get the data from shared service
-        this.data = this.sharedDataService.getData();
+        this.document = this.sharedDataService.getData();
 
         this.form = this.fb.group({});
-        const obj = Object.assign(this.data.data, {});
-        this.data = obj;
+        const obj = Object.assign(this.document, {});
+        this.document = obj;
 
         // Ready !!
         this.isReady = true;
@@ -52,8 +52,8 @@ export class BlockWrapperComponent implements OnInit {
     const configObject = Object.assign(this.config, {});
 
     // Access to every data property
-    for (const attr in this.data) {
-      if (this.data.hasOwnProperty(attr)) {
+    for (const attr in this.document.data) {
+      if (this.document.data.hasOwnProperty(attr)) {
 
         // Find if this property is required
         let property;
@@ -65,12 +65,12 @@ export class BlockWrapperComponent implements OnInit {
         // If is array this length must be greater than 0
         // If is a string value this length must be greater than 0
         if (property) {
-          if (this.data[attr] instanceof String) {
-            if (this.data[attr].trim().length === 0) {
+          if (this.document.data[attr] instanceof String) {
+            if (this.document.data[attr].trim().length === 0) {
               return false;
             }
-          } else if (this.data[attr] instanceof Array) {
-            if (this.data[attr].length === 0) {
+          } else if (this.document.data[attr] instanceof Array) {
+            if (this.document.data[attr].length === 0) {
               return false;
             }
           }
